@@ -1,0 +1,4 @@
+ERROR:root:Failed to process folder: C:/Users/PowerUser/Documents/Github_Repos_RSL/Ask_My_PDF. Error: 404 Client Error: Not Found for url: https://api.github.com/orgs/https://github.com/AI-Training-Projects/repos
+ERROR:root:Failed to process folder: C:/Users/PowerUser/Documents/Github_Repos_RSL/Ask_Multiple_PDFs. Error: 404 Client Error: Not Found for url: https://api.github.com/orgs/https://github.com/AI-Training-Projects/repos
+ERROR:root:Failed to process folder: C:/Users/PowerUser/Documents/Github_Repos_RSL/Streamlit_Cancer_Prediction. Error: 404 Client Error: Not Found for url: https://api.github.com/orgs/https://github.com/AI-Training-Projects/repos
+ERROR:root:Failed to process folder: C:/Users/PowerUser/Documents/Github_Repos_RSL/GitAutomation_Tools. Error: 404 Client Error: Not Found for url: https://api.github.com/orgs/https://github.com/AI-Training-Projects/repos

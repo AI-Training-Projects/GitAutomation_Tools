@@ -4,24 +4,14 @@ import requests
 import logging
 import yaml
 
-# TODO: check to make sure a remote repo doesn't already exist
-# TODO: add a final output message to let the user know the script has finished
-
 # Use read_config function to get configuration from config.yaml file
 def read_config():
     with open('config.yaml', 'r') as file:
         config = yaml.safe_load(file)
     return config['username'], config['org'], config['folders']
 
-# Uncomment lines below to set the configuration manually here
-# # Set the required variables
-# username = "YourGitHubUsername"
-# org = "YourGitHubOrganization"
-# folders = ["folder1", "folder2", "folder3"]  # Replace with your folder names
-
 # Set up logging
 logging.basicConfig(filename='git_automation.log', level=logging.INFO)
-
 
 # Get Access Token from environment variable
 access_token = os.getenv("GITHUB_ACCESS_TOKEN")
@@ -30,10 +20,13 @@ access_token = os.getenv("GITHUB_ACCESS_TOKEN")
 username, org, folders = read_config()
 
 # Loop through the folders
-for folder in folders:
+for folder_path in folders:
     try:
+        # Extract the folder name from the full path
+        folder_name = os.path.basename(folder_path)
+
         # Navigate to the folder
-        os.chdir(folder)
+        os.chdir(folder_path)
 
         # Initialize a new Git repo or update an existing one
         if not os.path.exists(".git"):
@@ -47,7 +40,7 @@ for folder in folders:
         # Create a new GitHub repo
         response = requests.post(
             f"https://api.github.com/orgs/{org}/repos",
-            json={"name": folder},
+            json={"name": folder_name},
             auth=(username, access_token)
         )
         response.raise_for_status()
@@ -57,11 +50,12 @@ for folder in folders:
         subprocess.run(["git", "push", "-u", "origin", "master"])
 
         # Log the success
-        logging.info(f"Successfully processed folder: {folder}")
+        logging.info(f"Successfully processed folder: {folder_name}")
 
         # Navigate back to the parent directory
         os.chdir("..")
 
     except Exception as e:
         # Log the error
-        logging.error(f"Failed to process folder: {folder}. Error: {e}")
+        logging.error(f"Failed to process folder: {folder_name}. Error: {e}")
+        
