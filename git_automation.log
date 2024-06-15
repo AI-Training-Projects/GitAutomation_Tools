@@ -14,3 +14,7 @@ ERROR:root:Failed to process folder: Ask_My_PDF. Error: 422 Client Error: Unproc
 ERROR:root:Failed to process folder: Ask_Multiple_PDFs. Error: 422 Client Error: Unprocessable Entity for url: https://api.github.com/orgs/AI-Training-Projects/repos
 ERROR:root:Failed to process folder: Streamlit_Cancer_Prediction. Error: 422 Client Error: Unprocessable Entity for url: https://api.github.com/orgs/AI-Training-Projects/repos
 ERROR:root:Failed to process folder: GitAutomation_Tools. Error: 422 Client Error: Unprocessable Entity for url: https://api.github.com/orgs/AI-Training-Projects/repos
+INFO:root:Successfully processed folder: Ask_My_PDF
+INFO:root:Successfully processed folder: Ask_Multiple_PDFs
+INFO:root:Successfully processed folder: Streamlit_Cancer_Prediction
+INFO:root:Successfully processed folder: GitAutomation_Tools
