@@ -1,0 +1,10 @@
+username: richlysakowski
+ # absolute path to this folder: "C:/Users/PowerUser/Documents/Github_Repos_RSL/GitAutomation_Tools"
+
+
+org: https://github.com/AI-Training-Projects
+folders:
+  - "C:/Users/PowerUser/Documents/Github_Repos_RSL/Ask_My_PDF"
+  - "C:/Users/PowerUser/Documents/Github_Repos_RSL/Ask_Multiple_PDFs"
+  - "C:/Users/PowerUser/Documents/Github_Repos_RSL/Streamlit_Cancer_Prediction"
+  - "C:/Users/PowerUser/Documents/Github_Repos_RSL/GitAutomation_Tools"

@@ -1,0 +1,7 @@
+username: <<YOUR GITHUB ACCOUNT NAME HERE>>
+#org: [OPTIONAL ORG NAME]
+folders:
+  - "Your Folder Name Here"
+  - "Your Folder Name Here 2"
+  - "Your Folder Name Here 3"
+  - "Your Folder Name Here 4"
